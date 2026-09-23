@@ -106,8 +106,8 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p className="text-text-secondary leading-relaxed">
               If you have any questions about this Privacy Policy, please contact us at:{" "}
-              <a href="mailto:contact@softkrestinfotech.com" className="text-accent hover:underline">
-                contact@softkrestinfotech.com
+              <a href="mailto:softkrestinfotech@gmail.com" className="text-accent hover:underline">
+                softkrestinfotech@gmail.com
               </a>
             </p>
           </div>

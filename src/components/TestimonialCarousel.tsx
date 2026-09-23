@@ -19,22 +19,6 @@ const testimonials = [
       "The school website they built for us is simply outstanding. It perfectly captures our educational philosophy while being incredibly easy to manage. Parents and staff have given tremendous positive feedback.",
     rating: 5,
   },
-  {
-    name: "Amit Patel",
-    role: "CEO, TechVentures",
-    company: "TechVentures Pvt. Ltd.",
-    content:
-      "Working with SoftKrestInfotech on our custom ERP system was a game-changer. They delivered on time, within budget, and the quality exceeded our expectations. Their AI integration capabilities are impressive.",
-    rating: 5,
-  },
-  {
-    name: "Sneha Agarwal",
-    role: "Marketing Head",
-    company: "GrowthBox Digital",
-    content:
-      "Their SEO services boosted our organic traffic by 300% in just 6 months. The team is knowledgeable, proactive, and genuinely cares about delivering results. A trustworthy partner for any digital initiative.",
-    rating: 5,
-  },
 ];
 
 export default function TestimonialCarousel() {

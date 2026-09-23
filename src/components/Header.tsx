@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -41,12 +42,14 @@ export default function Header() {
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent to-ai-accent flex items-center justify-center font-bold text-white text-lg font-[family-name:var(--font-heading)] group-hover:scale-110 transition-transform duration-300">
-              SK
-            </div>
-            <div className="absolute -inset-1 rounded-lg bg-gradient-to-br from-accent to-ai-accent opacity-0 group-hover:opacity-30 blur-lg transition-opacity duration-300" />
-          </div>
+          <Image
+            src="/logo.svg"
+            alt="SoftKrest Infotech Logo"
+            width={40}
+            height={40}
+            className="group-hover:scale-105 transition-transform duration-300 object-contain w-10 h-10"
+            priority
+          />
           <div>
             <span className="text-white font-bold text-lg font-[family-name:var(--font-heading)] tracking-tight">
               SoftKrest

@@ -65,31 +65,57 @@ export default function PortfolioPage() {
             {filtered.map((project, index) => (
               <SectionReveal key={project.slug} delay={index * 100}>
                 <div className="group bg-white rounded-2xl overflow-hidden border border-border hover:border-accent/30 card-hover">
-                  {/* Visual */}
-                  <div
-                    className={`h-56 bg-gradient-to-br ${project.color} relative overflow-hidden`}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-white/15 text-9xl font-bold font-[family-name:var(--font-heading)]">
-                        {project.title.charAt(0)}
+                  {/* Browser Frame Preview */}
+                  <div className="relative bg-gray-900 overflow-hidden" style={{ height: "260px" }}>
+                    {/* Browser chrome bar */}
+                    <div className="flex items-center gap-2 px-4 py-2.5 bg-gray-800 border-b border-gray-700 relative z-10">
+                      <div className="flex gap-1.5">
+                        <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                        <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                      </div>
+                      <div className="flex-1 mx-3 flex items-center gap-2 bg-gray-700/50 rounded-md px-3 py-1">
+                        <svg className="w-3 h-3 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                        <span className="text-xs text-gray-300 font-mono truncate">{project.url}</span>
                       </div>
                     </div>
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-3">
-                        {project.url && (
-                          <a
-                            href={project.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-5 py-2.5 bg-white text-text-primary rounded-xl text-sm font-medium hover:bg-gray-100 transition-colors"
-                          >
-                            Visit Site ↗
-                          </a>
-                        )}
+                    {/* Iframe preview */}
+                    <div className="relative" style={{ height: "220px" }}>
+                      <iframe
+                        src={project.screenshotUrl}
+                        title={`${project.title} website preview`}
+                        className="w-full h-full border-0"
+                        style={{
+                          transform: "scale(0.7)",
+                          transformOrigin: "top left",
+                          width: "143%",
+                          height: "143%",
+                          pointerEvents: "none",
+                        }}
+                        loading="lazy"
+                        sandbox="allow-scripts allow-same-origin"
+                      />
+                      {/* Overlay + Hover CTA */}
+                      <div className="absolute inset-0 z-10 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {project.url && (
+                            <a
+                              href={project.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-5 py-2.5 bg-white text-text-primary rounded-xl text-sm font-medium hover:bg-gray-100 transition-colors shadow-lg"
+                            >
+                              Visit Site ↗
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1.5 bg-white/20 backdrop-blur-sm text-white text-xs rounded-full font-medium">
+                    {/* Industry badge */}
+                    <div className="absolute bottom-3 left-4 z-20 pointer-events-none">
+                      <span className="px-3 py-1 bg-black/60 backdrop-blur-sm text-white text-xs rounded-full font-medium">
                         {project.industry}
                       </span>
                     </div>

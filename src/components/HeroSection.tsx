@@ -106,7 +106,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero w-full">
       {/* Particle canvas */}
       <canvas
         ref={canvasRef}
@@ -159,7 +159,7 @@ export default function HeroSection() {
               and enterprises.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-600">
+            <div className="flex flex-col sm:flex-row gap-4 flex-wrap animate-fade-in-up animation-delay-600">
               <Link href="/contact" className="btn-primary text-center">
                 Get a Free Quote
               </Link>
@@ -169,7 +169,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex items-center gap-6 mt-12 animate-fade-in-up animation-delay-800">
+            <div className="flex flex-wrap items-center gap-6 mt-12 animate-fade-in-up animation-delay-800">
               <div className="flex -space-x-3">
                 {["P", "R", "A", "S"].map((letter, i) => (
                   <div

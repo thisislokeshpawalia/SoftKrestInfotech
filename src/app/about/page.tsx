@@ -35,37 +35,6 @@ const values = [
   },
 ];
 
-const team = [
-  {
-    name: "Lokesh Pawalia",
-    role: "Founder & CEO",
-    bio: "Visionary leader driving SoftKrestInfotech's mission to deliver intelligent software solutions.",
-    initial: "LP",
-    color: "from-accent to-blue-600",
-  },
-  {
-    name: "Technical Lead",
-    role: "Lead Developer",
-    bio: "Expert full-stack developer with deep expertise in modern web and mobile technologies.",
-    initial: "TL",
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    name: "Design Lead",
-    role: "UI/UX Designer",
-    bio: "Creative designer crafting intuitive, beautiful interfaces that users love.",
-    initial: "DL",
-    color: "from-ai-accent to-teal-500",
-  },
-  {
-    name: "AI Engineer",
-    role: "AI/ML Specialist",
-    bio: "Machine learning expert building intelligent solutions that automate and optimize.",
-    initial: "AI",
-    color: "from-orange-500 to-amber-500",
-  },
-];
-
 const expertise = [
   { name: "Frontend", technologies: ["React", "Next.js", "Vue.js", "Flutter"], level: 95 },
   { name: "Backend", technologies: ["Node.js", "Python", "Java", "Go"], level: 90 },
@@ -200,52 +169,6 @@ export default function AboutPage() {
                   <p className="text-text-secondary text-sm">
                     {value.description}
                   </p>
-                </div>
-              </SectionReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section id="team" className="py-24 bg-white">
-        <div className="container-custom">
-          <SectionReveal>
-            <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent rounded-full text-sm font-semibold mb-4">
-                Our Team
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-heading)] text-text-primary mb-4">
-                Meet the People Behind the Code
-              </h2>
-              <p className="text-text-secondary max-w-2xl mx-auto">
-                A talented team of developers, designers, and strategists
-                committed to delivering excellence.
-              </p>
-            </div>
-          </SectionReveal>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <SectionReveal key={member.name} delay={index * 100}>
-                <div className="group text-center">
-                  <div className="relative mx-auto w-32 h-32 mb-6">
-                    <div
-                      className={`w-full h-full rounded-2xl bg-gradient-to-br ${member.color} flex items-center justify-center text-white text-3xl font-bold font-[family-name:var(--font-heading)] group-hover:scale-105 transition-transform duration-300`}
-                    >
-                      {member.initial}
-                    </div>
-                    <div
-                      className={`absolute -inset-2 rounded-2xl bg-gradient-to-br ${member.color} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300`}
-                    />
-                  </div>
-                  <h3 className="text-lg font-semibold font-[family-name:var(--font-heading)] text-text-primary mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-accent text-sm font-medium mb-2">
-                    {member.role}
-                  </p>
-                  <p className="text-text-secondary text-sm">{member.bio}</p>
                 </div>
               </SectionReveal>
             ))}

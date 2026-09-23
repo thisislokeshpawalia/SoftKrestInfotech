@@ -59,6 +59,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 const organizationSchema = {
@@ -71,14 +74,20 @@ const organizationSchema = {
     "Full-service software solutions company offering web development, mobile app development, SEO, hosting, custom software, and AI solutions.",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91-XXXXXXXXXX",
+    telephone: "+91-9220379644",
     contactType: "customer service",
     areaServed: ["IN", "AE", "GB", "US"],
     availableLanguage: ["English", "Hindi"],
   },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Varanasi",
+    addressRegion: "Uttar Pradesh",
+    addressCountry: "IN",
+  },
+  email: "softkrestinfotech@gmail.com",
   sameAs: [
     "https://www.linkedin.com/company/softkrestinfotech",
-    "https://twitter.com/softkrestinfo",
   ],
 };
 
