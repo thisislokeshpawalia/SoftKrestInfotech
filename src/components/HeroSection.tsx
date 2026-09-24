@@ -106,7 +106,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-gradient-hero w-full">
+    <section className="relative min-h-[100svh] flex flex-col justify-start lg:justify-center overflow-hidden bg-gradient-hero w-full">
       {/* Particle canvas */}
       <canvas
         ref={canvasRef}
@@ -136,7 +136,7 @@ export default function HeroSection() {
         </div>
       ))}
 
-      <div className="container-custom relative z-10 pt-32 pb-20 lg:py-32 mt-12 lg:mt-0">
+      <div className="container-custom relative z-10 pt-40 md:pt-48 pb-20 lg:py-32 mt-4 lg:mt-0">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text Content */}
           <div>
