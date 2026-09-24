@@ -302,8 +302,8 @@ export default function HomePage() {
       {/* CTA Band */}
       <CTABand />
 
-      {/* Lead Magnet Popup */}
-      <LeadMagnet />
+      {/* Lead Magnet Popup (Temporarily disabled) */}
+      {/* <LeadMagnet /> */}
     </>
   );
 }
