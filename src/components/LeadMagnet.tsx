@@ -26,8 +26,24 @@ export default function LeadMagnet() {
     sessionStorage.setItem("leadMagnetDismissed", "true");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    try {
+      await fetch("https://formsubmit.co/ajax/softkrestinfotech@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          _subject: "New Free Website Audit Request!",
+        }),
+      });
+    } catch (error) {
+      console.error(error);
+    }
+    
     setIsSubmitted(true);
     setTimeout(() => {
       handleClose();
