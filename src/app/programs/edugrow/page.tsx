@@ -34,7 +34,7 @@ export default function EduGrowPage() {
                 Book a Free Digital Audit
               </Link>
               <a 
-                href="/brochures/edugrow-brochure.pdf" 
+                href="/brochures/SoftKrest_Infotech_School_Deck_Print.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-lg font-medium transition-all duration-300 border border-white/20 text-white hover:bg-white/10 w-full sm:w-auto flex items-center justify-center gap-2"
